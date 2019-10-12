@@ -1,0 +1,71 @@
+.section {
+  .poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .poster-video {
+      position: absolute;
+      width: 100%;
+    }
+    .poster-logo {
+      position: relative;
+      color: white;
+      text-align: center;
+      margin-bottom: 10vh;
+      .logo-text-first {
+        font-size: 65px;
+        font-family: sans-serif;
+      }
+      .logo-text-second {
+        font-size: 27px;
+        font-family: initial;
+        text-align: -webkit-auto;
+      }
+      .logo-text-third {
+        font-size: 20px;
+        font-family: monospace;
+      }
+    }
+    .poster-watch {
+      position: relative;
+      .watch-underline-top {
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: white;
+        /* font-weight: 100; */
+        transform: scale(0.5);
+        top: -4px;
+        transition: all ease 0.2s;
+        opacity: 0;
+      }
+      span {
+        font-size: 17px;
+        color: white;
+        position: relative;
+        font-family: "MyWebFont";
+      }
+      .watch-underline-bottom {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: white;
+        bottom: 0px;
+        transition: all ease 0.2s;
+      }
+      &:hover {
+        cursor: pointer;
+
+        .watch-underline-top {
+          opacity: 1;
+          transform: initial;
+        }
+        .watch-underline-bottom {
+          bottom: -6px;
+        }
+      }
+    }
+  }
+}

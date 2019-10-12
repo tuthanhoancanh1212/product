@@ -1,0 +1,49 @@
+@import "../../mixin.scss";
+
+.menu-toggle {
+  position: fixed;
+  top: 50px;
+  overflow-y: scroll;
+  width: 250px;
+  height: calc(100% - 50px);
+  left: -250px;
+  z-index: 2;
+  background: white;
+  border-top: 1px solid #dedede;
+  transition: all 0.5s;
+
+  .toggle-navigation {
+    margin-top: 25px;
+  }
+  .menu-toggle-item {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "MyWebFont";
+    padding: 0px 0px 25px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}
+.menu-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+@include ipad {
+  .menu-overlay {
+    display: block;
+  }
+}
+#toggle {
+  display: none;
+}
+#toggle:checked ~ .menu-toggle {
+  left: 0px;
+}

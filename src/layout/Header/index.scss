@@ -1,0 +1,66 @@
+@import "../../mixin.scss";
+.header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 7;
+  top: 0;
+  background: white;
+  .mobile {
+    display: none;
+  }
+  .deskop {
+    transition: all ease 0.5s;
+    padding: 40px 0px 10px 0px;
+    z-index: 4;
+    .header-title {
+      font-weight: bold;
+      font-size: 45px;
+    }
+
+    .header-menu {
+      display: inline-flex;
+      font-family: "MyWebFont";
+
+      .menu-item {
+        font-weight: 500;
+        font-size: 12px;
+        padding: 0px 25px;
+        color: #8c8c8c;
+
+        &:hover {
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include ipad {
+    .mobile {
+      display: block;
+      line-height: 50px;
+      padding: 0px 15px;
+      border-bottom: 1px solid #dedede;
+      background: white;
+      .header-toggle {
+        float: left;
+        .toggle-image {
+          cursor: pointer;
+        }
+      }
+      .header-location {
+        float: right;
+      }
+      .header-title {
+        font-weight: bold;
+        font-size: 20px;
+        padding: 15px;
+        display: inline;
+      }
+    }
+    .deskop {
+      opacity: 0;
+      padding: 0px;
+    }
+  }
+}

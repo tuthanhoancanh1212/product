@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "MyWebFont";
+  src: url("../font/Gotham-Medium.otf");
+}
+body {
+  padding-top: 120px;
+}
+.active {
+  opacity: 1;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+}
